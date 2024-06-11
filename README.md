@@ -7,4 +7,6 @@ The build.py file is a simple script made to build the project, but can be used 
 ### **requirements**:
 
 - python (>=3.10)
-- clang (>=17.0.x)
+- clang (>=17.0.x) [or gcc, compiler can be changed in build.py]
+
+simply run the build.py script to build and compile the project
