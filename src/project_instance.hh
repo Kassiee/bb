@@ -1,7 +1,8 @@
 #include "include.hh"
 
 const std::vector<std::string> valid_options = {
-    "project_name", "c_compiler", "cxx_compiler", "cflags", "cxxflags"};
+    "project_name", "language",     "src_dir", "bin_dir", "include_dirs",
+    "c_compiler",   "cxx_compiler", "cflags",  "cxxflags"};
 
 struct part {
   std::string name;
