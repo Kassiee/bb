@@ -4,6 +4,6 @@ Bad Build - weird and poorly coded C++ project for a very small build system cau
 
 ### **requirements**:
 
-- clang (>=17.0.x) [or gcc, compiler can be changed in build.py]
+- clang (>=17.0.x) [or gcc, compiler can be changed in build.sh]
 
 simply run the build.sh script to build and compile the project
