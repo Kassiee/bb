@@ -4,6 +4,7 @@ Bad Build - weird and poorly coded C++ project for a very small build system cau
 
 The build.py file is a simple script made to build the project, but can be used by itself in anything else
 
-**requirements**:
-python (>=3.10)
-clang (>=17.0.x)
+### **requirements**:
+
+- python (>=3.10)
+- clang (>=17.0.x)
