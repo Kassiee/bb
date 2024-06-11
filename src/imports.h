@@ -1,6 +1,7 @@
 #include "fstream"
 #include <algorithm>
 #include <any>
+#include <cctype>
 #include <filesystem>
 #include <functional>
 #include <iostream>

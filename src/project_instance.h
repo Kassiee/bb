@@ -21,5 +21,10 @@ public:
 
   std::string operator[](const std::string &name) { return properties[name]; }
 
-  void config(std::vector<part> parts_input);
+  void config(std::vector<part> &parts_input);
+
+  std::vector<std::string> get_files(const std::string &dir);
+
+private:
+  std::vector<std::string> file_extensions;
 };

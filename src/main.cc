@@ -9,44 +9,25 @@ using std::vector;
 
 namespace fs = std::filesystem;
 
-class project_manager {
-private:
-  vector<string> extensions;
-
-public:
-  project_manager(string language) {
-
-    if (language == "c") {
-      extensions = {"c"};
-    } else if (language == "cpp") {
-      extensions = {"cc", "cxx", "cpp"};
-    } else {
-      cout << "[LOG] Unrecognized 'language' input \"" << language
-           << "\". Valid inputs are: c, cpp"
-           << "\n";
-    }
-  }
-
-  vector<string> get_files(const std::string &_dir) {
-    vector<string> files;
-    for (const auto &entry : fs::recursive_directory_iterator(_dir)) {
-      if (entry.is_regular_file()) {
-        string filename = entry.path().string();
-
-        if (std::any_of(extensions.begin(), extensions.end(),
-                        [&](const string &ext) {
-                          return filename.size() > ext.size() &&
-                                 filename.compare(filename.size() - ext.size(),
-                                                  ext.size(), ext) == 0;
-                        })) {
-          files.push_back(filename);
-        }
-      }
-    }
-
-    return files;
-  }
-};
+// vector<string> get_files(const std::string &_dir) {
+//   vector<string> files;
+//   for (const auto &entry : fs::recursive_directory_iterator(_dir)) {
+//     if (entry.is_regular_file()) {
+//       string filename = entry.path().string();
+//
+//       if (std::any_of(extensions.begin(), extensions.end(),
+//                       [&](const string &ext) {
+//                         return filename.size() > ext.size() &&
+//                                filename.compare(filename.size() - ext.size(),
+//                                                 ext.size(), ext) == 0;
+//                       })) {
+//         files.push_back(filename);
+//       }
+//     }
+//   }
+//
+//   return files;
+// }
 
 int main(int argc, char **argv) {
   input_parser input(argc, argv);
@@ -81,11 +62,11 @@ int main(int argc, char **argv) {
       auto delimites_pos = line.find("=");
       string name = line.substr(0, delimites_pos);
       string value = line.substr(delimites_pos + 1);
-      // cout << name << " " << value << "\n";
       cfg.push_back(part{.name = name, .value = value});
     }
   }
 
   project_instance project;
   project.config(cfg);
+  project.get_files(project.properties["src_dir"]);
 }

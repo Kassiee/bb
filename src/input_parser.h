@@ -1,15 +1,12 @@
 #include "imports.h"
 
-using std::string;
-using std::vector;
-
 class input_parser {
 public:
   input_parser(int &arc, char **argv);
 
-  const string &get_cmd_option(const string &option) const;
-  bool cmd_option_exists(const string &option) const;
+  const std::string &get_cmd_option(const std::string &option) const;
+  bool cmd_option_exists(const std::string &option) const;
 
 private:
-  vector<string> tokens;
+  std::vector<std::string> tokens;
 };
