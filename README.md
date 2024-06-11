@@ -1,6 +1,6 @@
 # BB
 
-Bad Build - weird and poorly coded C++ project for a very small build system cause I've had enough of cmake and meson :p (W.I.P)
+Bad Build - weird and poorly coded C++ project for a very small build system cause I've had enough of cmake and meson :p (VERY EARLY W.I.P)
 
 ### **requirements**:
 
