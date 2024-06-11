@@ -26,3 +26,8 @@ object_files=$(find ./bin -type f)
 echo "Linking..."
 
 $COMPILER -Wl,-O1 -fuse-ld=mold $object_files -o $BIN/$EXEC
+wait
+for _obj in $object_files
+do
+    rm $_obj
+done

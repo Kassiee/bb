@@ -1,5 +1,5 @@
-#include "project_instance.hh"
-#include "util/split.hh"
+#include "project_instance.h"
+#include "util/split.h"
 
 void project_instance::config(std::vector<part> parts_input) {
   for (part x : parts_input) {

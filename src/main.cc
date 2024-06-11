@@ -1,7 +1,7 @@
-#include "include.hh"
-#include "input_parser.hh"
-#include "project_instance.hh"
-#include "util/split.hh"
+#include "imports.h"
+#include "input_parser.h"
+#include "project_instance.h"
+#include "util/split.h"
 
 using std::cout;
 using std::string;

@@ -1,5 +1,4 @@
-#include "input_parser.hh"
-// code not mine. thanks to iain on stackoverflow
+#include "input_parser.h"
 
 input_parser::input_parser(int &argc, char **argv) {
   for (int i = 1; i < argc; ++i) {
